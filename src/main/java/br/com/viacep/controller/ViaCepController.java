@@ -1,7 +1,6 @@
 package br.com.viacep.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -20,7 +19,7 @@ public class ViaCepController {
 
 	@GetMapping("{zipCode}")
 	public ResponseEntity<Object> consumer(@PathVariable String zipCode, @RequestParam long idFormat) {
-		HttpMethod.resolve("");
 		return ResponseEntity.ok(service.consumer(zipCode, idFormat));
 	}
+	
 }
